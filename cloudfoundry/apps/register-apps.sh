@@ -1,7 +1,4 @@
-SERVER_URI=$(cf apps | grep dataflow-server- | awk '{print $6}' | sed 's:,::g')
-export SERVER_URI="https://$SERVER_URI"
-
-echo "SCDF SERVER URI: $SERVER_URI"
+$ROOT_DIR/$PLATFORM_FOLDER/server/server-uri.sh
 
 if [[ -z "${STREAM_APPS_URI}" ]]; then
   APPS_BINDER=$BINDER

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #================================= Clean up target AT environment =========================
+export ROOT_DIR=$PWD
 # Import common functions
 . scripts/utility-functions.sh
 
