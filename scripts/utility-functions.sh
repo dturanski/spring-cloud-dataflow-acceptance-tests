@@ -103,7 +103,7 @@ run_scripts() {
 
     if [[ -f "${SCRIPT_FILE}" ]]; then
       DEBUG "executing $CURRENT_DIR/$SCRIPT_DIR/$SCRIPT_FILE"
-      . ${SCRIPT_FILE}
+      . ${SCRIPT_FILE} ${@:3:$#}
     else
       echo "Not running non-existent script: ${SCRIPT_DIR}/${SCRIPT_FILE}"
     fi
